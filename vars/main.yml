@@ -1,0 +1,15 @@
+---
+srv_ip: "10.0.0.2"
+nodes_subnet24: "10.0.0"
+baseName: "auto"
+baseDomain: "lajoie.org"
+
+#Node inventory used for most roles
+nodes:
+  auto:
+    - name: "netsrv"
+      ipaddr: "{{ nodes_subnet24 }}.2"
+    - name: "udm"
+      ipaddr: "{{ nodes_subnet24 }}.1"
+
+firewall_zone: FedoraServer
